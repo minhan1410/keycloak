@@ -1,0 +1,43 @@
+keycloak:
+    auth-server-url: http://localhost:8081
+    bearer-only: false
+    confidential-port: 8081
+    credentials:
+        secret: 7ThIF1hgRa5sVlppfIQyvvXfChxTHLY1
+    policy-enforcer-config:
+        enforcement-mode: ENFORCING
+    principal-attribute: preferred_username
+    public-client: false
+    realm: master
+    resource: asset
+    ssl-required: none
+    use-resource-role-mappings: true
+    security-constraints:
+        - authRoles:
+              - '*'
+          security-collections:
+              - patterns:
+                    - '/*'
+logging:
+    level:
+        com:
+            edw: debug
+        root: warn
+server:
+    forward-headers-strategy: NATIVE
+    port: 8082
+spring:
+    application:
+        name: Keycloak for Backchannel
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 123456
+        url: jdbc:mysql://127.0.0.1:3306/db_session
+        username: root
+    main:
+        allow-bean-definition-overriding: true
+    session:
+        jdbc:
+            flush-mode: on_save
+            initialize-schema: always
+
