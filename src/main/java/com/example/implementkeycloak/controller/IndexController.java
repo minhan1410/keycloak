@@ -1,4 +1,4 @@
-package com.example.implementkeycloak;
+package com.example.implementkeycloak.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.keycloak.adapters.springsecurity.token.KeycloakAuthenticationToken;

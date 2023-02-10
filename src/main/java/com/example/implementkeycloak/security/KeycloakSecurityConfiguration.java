@@ -1,4 +1,4 @@
-package com.example.implementkeycloak;
+package com.example.implementkeycloak.security;
 
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;
 import org.keycloak.adapters.springsecurity.KeycloakConfiguration;
